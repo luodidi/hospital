@@ -2,14 +2,17 @@ package com.whut.service.imp;
 
 
 import com.whut.bean.Medicine;
-import com.whut.dao.MedicineDao;
+import com.whut.dao.IMedicineDao;
 import com.whut.service.IMedicineService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class MedicineService implements IMedicineService {
-
-    public MedicineDao medecineDao;
+   @Autowired
+    public IMedicineDao medecineDao;
 
     // 获取所有药品
     @Override

@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IMedicineService {
     // 获取所有药品
-    List<Medicine> findAll();
+    public List<Medicine> findAll();
 
     // 删除药品
     public void deleteMedicine(int id);
