@@ -15,7 +15,7 @@
         <div class="col-md-12 column">
             <div class="page-header">
                 <h1>
-                    MedicineMange 药品管理
+                    DoctorMange 医生管理
                 </h1>
             </div>
         </div>
@@ -25,14 +25,14 @@
         <div class="col-md-12 column">
             <div class="page-header">
                 <h1>
-                    <small> MedicineList—— show all medicine</small>
+                    <small> DoctorInfoList—— show all doctor</small>
                 </h1>
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col-md-4 column">
-            <a class="btn btn-primary" href="addUser.jsp">新增</a>
+            <a class="btn btn-primary" href="allUser.jsp">新增</a>
 
         </div>
     </div>
@@ -41,24 +41,29 @@
             <table class="table table-hover table-striped">
                 <thead>
                 <tr>
-                    <th>Medicine id</th>
-                    <th>Medicine name</th>
-                    <th>Medicine num</th>
-                    <th>Medicine class</th>
-                    <th>Medicine price</th>
+                    <th>医生工号</th>
+                    <th>医生ID</th>
+                    <th>医生职称</th>
+                    <th>医生性别</th>
+                    <th>出生年月</th>
+                    <th>科室编号</th>
+                    <th>登录密码</th>
+                    <th>医生姓名</th>
 
                 </tr>
                 </thead>
                 <tbody>
-                <c:forEach items="${AllMedicine}" var="Medicine">
+                <c:forEach items="${DoctorInfo}" var="Doctor">
                     <tr>
-                        <td>${Medicine.m_id}</td>
-                        <td>${Medicine.m_name}</td>
-                        <td>${Medicine.m_num}</td>
-                        <td>${Medicine.m_class}</td>
-                        <td>${Medicine.m_price}</td>
+                        <td>${Doctor.d_id}</td>
+                        <td>${Doctor.t_id}</td>
+                        <td>${Doctor.d_title}</td>
+                        <td>${Doctor.d_gender}</td>
+                        <td>${Doctor.d_birthday}</td>
+                        <td>${Doctor.dp_id}</td>
+                        <td>${Doctor.d_password}</td>
+                        <td>${Doctor.d_name}</td>
 
-                        <td></td>
                         <td>
                             <a href="addUser.jsp">更改</a> |
                             <a href="allUser.jsp">删除</a>

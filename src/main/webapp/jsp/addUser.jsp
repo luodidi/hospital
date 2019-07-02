@@ -2,6 +2,7 @@
          pageEncoding="UTF-8" isELIgnored="false"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+
 <html>
 <head>
     <title>新增用户</title>
@@ -15,7 +16,7 @@
         <div class="col-md-12 column">
             <div class="page-header">
                 <h1>
-                    基于SSM框架的管理系统：简单实现增、删、改、查。
+                    医生管理--添加医生
                 </h1>
             </div>
         </div>
@@ -25,17 +26,26 @@
         <div class="col-md-12 column">
             <div class="page-header">
                 <h1>
-                    <small>新增用户</small>
+                    <small>添加医生</small>
                 </h1>
             </div>
         </div>
     </div>
     <form action="${pageContext.request.contextPath}/user/AddUser.do"
-              method="post">
-        用&nbsp;&nbsp;户&nbsp;&nbsp;id：<input type="text" name="id"><br><br><br>
-        用户姓名：<input type="text" name="username"><br><br><br>
-        用户密码：<input type="text" name="password"><br><br><br>
+          method="post">
+
+        医生工号&nbsp;&nbsp;&nbsp;&nbsp;id：<input type="text" name="id"><br><br><br>
+        医生编号：<input type="text" name="username"><br><br><br>
+        医生职称：<input type="text" name="password"><br><br><br>
+        医生性别：<input type="text" name="username"><br><br><br>
+        医生出生年月：<input type="text" name="password"><br><br>
+        医生密码：<input type="text" name="username"><br><br><br>
+        医生姓名：<input type="text" name="password"><br><br><br>
+        医生简介：<input type="text" name="password"><br><br><br>
+
+
         <input type="submit" value="添加" >
     </form>
 
 </div>
+</body>

@@ -1,8 +1,10 @@
 package com.whut.controller;
 
+import com.whut.bean.Doctor;
 import com.whut.bean.Medicine;
+import org.springframework.stereotype.Service;
+import com.whut.service.IDoctorService;
 import com.whut.service.IMedicineService;
-import com.whut.service.imp.MedicineService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,28 +13,23 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.List;
 
 @Controller
-@RequestMapping("/user")
-public class MedicineController {
+@RequestMapping("/allDoctor")
+public class DoctorController {
+
 /*
     @Autowired
-    public IMedicineService medicineService;
+    public IDoctorService docService;
 
     //do是请求说明
-    @RequestMapping("/findAll.do")
-    public ModelAndView findAll() {
-        List<Medicine> all = medicineService.getAllMedicine();
+    @RequestMapping("/getAllDoctor.do")
+    public ModelAndView geAllDoctor() {
+        List<Doctor> all = docService.getAllDoctor();
         ModelAndView mv = new ModelAndView();
-        mv.addObject("AllMedicine", all);
-        mv.setViewName("allUser");
+        mv.addObject("DoctorInfo", all);
+        mv.setViewName("allDoctor");
         return mv;
 
     }
-    */
+
+*/
 }
-
-
-
-
-
-
-
