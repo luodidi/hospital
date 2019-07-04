@@ -1,9 +1,7 @@
 package com.whut.service.imp;
 
 
-import com.whut.bean.Doctor;
 import com.whut.bean.Medicine;
-import com.whut.dao.IDoctorDao;
 import com.whut.service.IMedicineService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/Linecons.css">
+    <link rel="stylesheet" href="../css/left-menu.css">
+    <link rel="stylesheet" href="../css/doc-common.css">
+    <link rel="stylesheet" href="../css/hadAppointment.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <style>
+        body {
+            background: #cccccc;
+        }
+    </style>
+    <title>Title</title>
+</head>
+<body>
+<nab class="menu-wrap">
+    <div class="menu">
+        <ul>
+            <!-- 在这里修改链接 跳转  -->
+            <li><a href="javascript:;"> <i class="icon icon-calendar"></i><span>首页</span></a></li>
+            <li><a href="javascript:;"><i class="icon icon-clock"></i><span>预约管理</span></a></li>
+            <li class="darkerlishadow"><a href="preparAppointment.html"><i class="icon icon-clock"></i><span>待处理</span></a></li>
+            <li class="darkerlishadowdown "><a href="hadAppointment.html"><i class="icon icon-clock"></i><span>已处理</span></a></li>
+            <li><a href="javascript:;"> <i class="icon icon-calendar"></i><span>病例查询</span></a></li>
+            <li><a href="javascript:;"><i class="icon icon-clock"></i><span>药品管理</span></a></li>
+            <li class="darkerlishadow "><a href="drugList.html"><i class="icon icon-clock"></i><span>分类列表</span></a></li>
+            <li class="darkerlishadowdown activeli"><a href="javascript:;"><i class="icon icon-clock"></i><span>处方开药</span></a></li>
+            <li><a href="javascript:;"><i class="icon icon-banknote"></i><span>医生管理</span></a></li>
+            <li><a href="javascript:;"><i class="icon icon-banknote"></i><span>个人中心</span></a></li>
+            <li><a href="javascript:;"><i></i><span>退出</span></a></li>
+        </ul>
+    </div>
+</nab>
+<div class="card">
+    <p class="card-title">处方单</p>
+    <table class="table table-striped table-bordered">
+        <tr>
+            <th>病例编号</th>
+            <th>病人姓名</th>
+            <th>诊断时间</th>
+            <th>诊断科目</th>
+            <th>药物条目</th>
+            <th>诊断医师</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>723</td>
+            <td>张三</td>
+            <td>2019-7-6</td>
+            <td>骨科</td>
+            <td>药物a、药物b、药物c</a></td>
+            <td><Doc class="chen"></Doc></td>
+            <td><a role="button" class="warning" data-toggle="modal" data-target="#prescription">开药</a></td>
+        </tr>
+    </table>
+    <nav aria-label="Page navigation" >
+        <ul class="pagination">
+            <li>
+                <a href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li>
+                <a href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="prescription" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">处方单</h4>
+            </div>
+            <div class="modal-body">
+                <form action="" class="form-group" id="prescription-form">
+                    <div class="input-group">
+                        <span class="input-group-addon">病例编号</span>
+                        <input type="text" class="form-control " placeholder="" name="prescriptioncard" disabled value="病例编号">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">药&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;品</span>
+                        <input type="text" class="form-control " placeholder="" name="prescriptioncard" value="">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量</span>
+                        <input type="text" class="form-control " placeholder="" name="prescriptioncard" value="">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" id="close">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/jquery-2.2.1.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#close').click(function () {
+            $('#prescription-form')[0].reset();
+            $('#prescription').modal('hide');
+        });
+    });
+</script>
+</body>
+</html>
+</body>
+</html>
